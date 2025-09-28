@@ -1,6 +1,5 @@
 # type: ignore
 # -*- coding: utf-8 -*-
-
 import random
 from pygame import Rect
 
@@ -109,7 +108,8 @@ class SmallButton:
     def draw(self): screen.draw.filled_rect(self.r,(210,210,230)); screen.draw.rect(self.r,(30,30,60)); screen.draw.text(self.text,center=self.r.center,fontsize=22,color="black")
     def hit(self,pos): return self.r.collidepoint(pos)
 
-btns=[Button("Iniciar",250),Button("Musica ON/OFF",350),Button("Sair do jogo",450)]
+
+btns=[Button("Iniciar",250),Button("Audio ON/OFF",350),Button("Sair do jogo",450)]
 
 def make_game_buttons():
     x=12; return [SmallButton(f"Musica {'ON' if music_on else 'OFF'}",x,12),
@@ -138,7 +138,7 @@ def draw():
         for b in game_btns: b.draw()
     else:
         screen.fill((20,30,20))
-        screen.draw.text("Issooo!",center=(WIDTH//2,180),fontsize=72,color="white")
+        screen.draw.text("Issoooo!",center=(WIDTH//2,180),fontsize=72,color="white")
         screen.draw.text("Venceu!",center=(WIDTH//2,260),fontsize=48,color="white")
         screen.draw.text("ENTER ou clique para voltar ao menu",center=(WIDTH//2,360),fontsize=28,color="white")
 
@@ -170,7 +170,10 @@ def on_mouse_down(pos):
     global game_state,music_on,sfx_on,game_btns
     if game_state==STATE_MENU:
         if   btns[0].hit(pos): set_game()
-        elif btns[1].hit(pos): music_on=not music_on; toggle_music(); btns[1].text=f"Musica {'ON' if music_on else 'OFF'}"
+        elif btns[1].hit(pos):  
+            music_on = not music_on; sfx_on = not sfx_on
+            toggle_music()
+            btns[1].text = f"Audio {'ON' if music_on else 'OFF'}"
         elif btns[2].hit(pos): exit()
     elif game_state==STATE_GAME:
         if   game_btns[0].hit(pos): music_on=not music_on; toggle_music(); game_btns[0].text=f"Musica {'ON' if music_on else 'OFF'}"
@@ -183,7 +186,7 @@ def set_game():
     hero=Hero(); enemies=[Enemy(10,2,Rect(8,1,10,4)),Enemy(20,3,Rect(18,1,6,5))]
     game_btns=make_game_buttons(); game_state=STATE_GAME; toggle_music()
 
-def set_menu(): 
+def set_menu():
     global game_state; game_state=STATE_MENU
 
 def set_win():
