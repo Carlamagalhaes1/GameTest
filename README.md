@@ -49,8 +49,8 @@ Menu principal:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/SEU-USUARIO/GameTest.git
-   cd GameTest
+   https://github.com/Carlamagalhaes1/GameTest.git
+   cd MYGAMETEST
    ```
 
 
@@ -68,6 +68,7 @@ Menu principal:
 ## ▶️ Como rodar
 
 O arquivo principal do jogo é **`game.py`**.
+  rode com:
 
   ```bash
   pgzrun game.py
