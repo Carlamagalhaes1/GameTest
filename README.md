@@ -53,7 +53,16 @@ Menu principal:
    cd GameTest
    
    ```
+2. (Opcional, mas recomendado) Crie e ative um ambiente virtual:
+  ```bash
+# macOS/Linux
+  python3 -m venv venv
+  source venv/bin/activate
 
+# Windows (PowerShell)
+  py -m venv venv
+  venv\Scripts\activate
+  ```
 
 3. Instale as dependências:
    ```bash
