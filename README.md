@@ -48,13 +48,13 @@ Menu principal:
 ## 📦 Instalação
 
 1. Clone o repositório:
-   ```bash
+```bash
    git clone https://github.com/Carlamagalhaes1/GameTest.git
    cd GameTest
    
-   ```
+```
 2. (Opcional, mas recomendado) Crie e ative um ambiente virtual:
-  ```bash
+```bash
 # macOS/Linux
   python3 -m venv venv
   source venv/bin/activate
@@ -62,16 +62,16 @@ Menu principal:
 # Windows (PowerShell)
   py -m venv venv
   venv\Scripts\activate
-  ```
-
+```
+  
 3. Instale as dependências:
-   ```bash
+```bash
    # Windows
    py -m pip install -r requirements.txt
 
    # macOS/Linux
    python3 -m pip install -r requirements.txt
-   ```
+```
 
 ---
 
