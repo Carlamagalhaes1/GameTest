@@ -97,18 +97,6 @@ O arquivo principal do jogo é **`game.py`**.
 
 ---
 
-## 🧠 Detalhes técnicos (resumo)
-
-- **Gênero**: Roguelike (top-down, grid)  
-- **Animação**: `AnimatedSprite` alterna frames a cada 0.1s (`idle`/`walk` para esquerda e direita)  
-- **Movimento suave**: herói e inimigos interpolam posição entre tiles (`self.t` de 0→1)  
-- **IA simples de patrulha**: inimigos escolhem passos aleatórios dentro de um `Rect` de **território**, respeitando paredes (`is_wall`)  
-- **Estados**: `STATE_MENU`, `STATE_GAME`, `STATE_WIN`  
-- **UI**: botões do menu; botões pequenos no HUD do jogo  
-- **Áudio**: música em loop (toggle **M**), efeitos (toggle **N**)
-
----
-
 ## 🛠️ Solução de problemas
 
 - **“No music found like 'bgm'”**  
