@@ -49,7 +49,7 @@ Menu principal:
 
 1. Clone o repositório:
    ```bash
-   https://github.com/Carlamagalhaes1/GameTest.git
+   git clone https://github.com/Carlamagalhaes1/GameTest.git
    cd GameTest
    
    ```
